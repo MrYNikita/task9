@@ -1,0 +1,85 @@
+#div {
+
+    border: 1px solid gray;
+    width: 300px;
+
+}
+
+#form {
+
+    height: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+#table {
+
+    width: 300px;
+    border: 1px solid grey;
+    border-collapse: collapse;
+
+}
+
+#table > th, td {
+   border: 1px solid grey;
+}
+
+#input_name {
+
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+#input_count {
+
+    grid-row: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+#button_add {
+
+    grid-row: 5;
+    grid-column-start: 1;
+    grid-column-end: 1;
+
+}
+
+#button_remove {
+
+    grid-row: 5;
+    grid-column-start: 2;
+    grid-column-end: 2;
+
+}
+
+#p_input_name {
+
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+
+}
+
+#p_input_count {
+
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+
+}
+
+#button_rechange {
+
+    grid-row: 6;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}

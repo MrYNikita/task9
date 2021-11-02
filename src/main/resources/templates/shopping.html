@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Покупки</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+
+    <body>
+
+        <table id="table">
+
+            <thead>
+
+                <tr>
+
+                    <th> Наименование </th>
+                    <th> Количество   </th>
+                    <th> Куплено      </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr th:if="${products.empty}">
+                    <td colspan="2"> Список покупок пуст </td>
+                </tr>
+                <tr th:each="product : ${products}">
+                    <td><span th:text="${product.name}"> Наименование </span></td>
+                    <td><span th:text="${product.count}"> Количество </span></td>
+                    <td><span th:text="${product.buy}"> Куплено </span></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <div id="div">
+
+            <form id="form" action="/products" method="post">
+
+                <p id="p_input_name">Укажите_наименование:</p>
+                <input id="input_name" name="input_name"/>
+                <p id="p_input_count">Укажите количество:</p>
+                <input id="input_count" name="input_count">
+                <button id="button_add">Добавить</button>
+                <button id="button_remove">Убрать</button>
+                <button id="button_rechange">Изменить</button>
+
+            </form>
+
+        </div>
+
+    </body>
+
+</html>
